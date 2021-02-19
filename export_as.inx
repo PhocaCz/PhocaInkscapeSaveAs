@@ -1,0 +1,93 @@
+<inkscape-extension>
+    <name>Export As</name>
+    <id>org.phoca.export.export_as</id>
+    <dependency type="executable" location="extensions">export_as.py</dependency>
+
+    <param name="tab" type="notebook">
+        <page name="export_tab" gui-text="Export">
+            <param name="path" type="path" gui-text="Filename (with full path)" gui-description="Set filename with full path" filetypes="jpg,png,webp" mode="file_new"></param>
+
+            <spacer />
+
+            <!--<param name="format" type="optiongroup" appearance="minimal" gui-text="Format" gui-description="Select format">-->
+            <param name="format" type="optiongroup" gui-text="Format" gui-description="Select format">
+                <option value="jpg">JPG</option>
+                <option value="png">PNG</option>
+                <option value="webp">WEBP</option>
+            </param>
+
+            <spacer />
+
+            <param name="quality" type="int" min="0" max="100" gui-text="Quality % (JPG only)" gui-description="Set JPG compression quality in %">100</param>
+            <param name="resize" type="int" min="0" max="100" gui-text="Resize %" gui-description="Resize image in %">100</param>
+            <param name="dpi" type="int" min="30" max="2400" gui-text="Resolution (DPI)" gui-description="Set Resolution (DPI)">96</param>
+
+            <spacer />
+
+            <param name="bg_color" type="color" gui-text="Background color" gui-description="Set background color" appearance="colorbutton">rgba(0, 0, 0, 0)</param>
+            <param name="bg_transparent_color" type="boolean" gui-text="Background transparent" gui-description="Set transparent background color" appearance="colorbutton">false</param>
+
+            <spacer />
+        
+
+            <param name="export_area_type" type="optiongroup" gui-text="Export area type" gui-description="Select export area type">
+                <option value="1">Page</option>
+                <option value="2">Selection</option>
+                <option value="3">Custom</option>
+            </param>
+
+            <param name="custom_export_area_desc" type="description" appearance="header">Custom area</param>
+            <!--<param name="export_area" type="boolean" gui-text="Export area" gui-description="Set area which will be exported">false</param>-->
+            <param name="x" type="float" precision="3" gui-text="X" min="-99999" max="99999" gui-description="Sext X position"></param>
+            <param name="y" type="float" precision="3" gui-text="Y" min="-99999" max="99999" gui-description="Sext Y position"></param>
+            <param name="w" type="float" precision="3" gui-text="W" min="0" max="99999" gui-description="Sext width"></param>
+            <param name="h" type="float" precision="3" gui-text="H" min="0" max="99999" gui-description="Sext height"></param>
+            <param name="units" type="optiongroup" appearance="combo" gui-text="Base unit:">
+                <option value="1.">px</option>
+                <option value="72./96">pt</option>
+                <option value="1./16">pc</option>
+                <option value="25.4/96">mm</option>
+                <option value="2.54/96">cm</option>
+                <option value=".0254/96">m</option>
+                <option value="1./96">in</option>
+                <option value="1./1152">ft</option>
+            </param>
+
+        </page>
+        <page name="info_tab" gui-text="Info">
+
+            <param name="usage" type="description" appearance="header">Usage:</param>
+            <param name="help" type="description" xml:space="preserve">- Select filename with full path
+- Select output format
+- Select an area type
+  - Full page
+  - Selection - area of selected object(s)
+  - Custom - area of manually added coordinates
+- Click on Apply to export image.
+
+Be aware:
+- This extensions requires ImageMagick library installed on your system (https://www.imagemagick.org)
+- If the selected file has a different extension than the selected format then the file will be automatically renamed and may overwrite any existing file
+- Current files are overwritten automatically, there is no warning
+- When using the selection method, for more accurate and faster results, it is recommended to create one object that covers the area of all other objects, and only select this object when exporting.
+
+See:
+
+- https://www.phoca.cz/blog/1121-inkscape-save-as-save-as-jpg-save-as-webp-save-as-png-extension
+- https://inkscape.org
+- https://www.imagemagick.org
+- https://www.phoca.cz
+</param>
+
+        </page>
+    </param>
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="Export" />
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">export_as.py</command>
+    </script>
+</inkscape-extension>
