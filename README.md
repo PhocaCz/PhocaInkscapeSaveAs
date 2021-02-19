@@ -1,2 +1,2 @@
 # PhocaInkscapeSaveAs
- Inkscape extension to save images as JPG, WEBP or PNG
+ Inkscape extension to export images to JPG, WEBP or PNG format
