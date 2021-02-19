@@ -1,4 +1,4 @@
-# PhocaInkscapeSaveAs
+# Phoca - Inkscape Save As
  Inkscape extension to export images to JPG, WEBP or PNG format
 
 
@@ -23,7 +23,7 @@ See video:
 
 ### How to install
 
-Just follow Inkscape guides for installing Inkscape extensions (download the ZIP package and unzip it to Inkscape extension folder and restart Inkscape)
+Just follow Inkscape guides for installing Inkscape extensions (download the [ZIP package](https://www.phoca.cz/download/category/127-inkscape-save-as) and unzip it to Inkscape extension folder and restart Inkscape)
 
 See initial projects: 
 
