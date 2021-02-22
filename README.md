@@ -25,6 +25,12 @@ See video:
 
 Just follow Inkscape guides for installing Inkscape extensions (download the [ZIP package](https://www.phoca.cz/download/category/127-inkscape-save-as) and unzip it to Inkscape extension folder and restart Inkscape)
 
+Inkscape extension folder you can find here: Inkscape - Edit - Preferences - System - Inkscape extensions
+
+
+### Languages:
+- German language: [German language download](https://www.reisefotografien.eu/downloads/category/218-inkscape-save-as)
+
 See initial projects: 
 
 - [https://github.com/giacmir/Inkscape-JPEG-export-extension](https://github.com/giacmir/Inkscape-JPEG-export-extension)
