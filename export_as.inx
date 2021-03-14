@@ -88,6 +88,6 @@ See:
         </effects-menu>
     </effect>
     <script>
-        <command reldir="extensions" interpreter="python">export_as.py</command>
+        <command location="inx" interpreter="python">export_as.py</command>
     </script>
 </inkscape-extension>
