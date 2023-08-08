@@ -11,7 +11,7 @@ Phoca - Inkscape Save As extension is inspired by both projects. It uses some co
 See more info here: [Inkscape - Save As (Save As JPG, Save As WEBP, Save As PNG) Extension](https://www.phoca.cz/blog/1121-inkscape-save-as-save-as-jpg-save-as-webp-save-as-png-extension)
 
 
-Tested with Inkscape version 1.0.2
+Tested with Inkscape version 1.3
 
 See video:
 
@@ -31,9 +31,7 @@ Inkscape extension folder you can find here: Inkscape - Edit - Preferences - Sys
 ### Languages:
 - German language: [German language download](https://www.reisefotografien.eu/downloads/category/218-inkscape-save-as)
 
-See initial projects: 
+See initial projects:
 
 - [https://github.com/giacmir/Inkscape-JPEG-export-extension](https://github.com/giacmir/Inkscape-JPEG-export-extension)
 - [https://github.com/Moini/Inkscape-JPEG-export-extension-webp](https://github.com/Moini/Inkscape-JPEG-export-extension-webp)
-
-

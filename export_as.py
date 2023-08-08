@@ -167,6 +167,9 @@ class ExportAs(inkex.Effect):
     
     def export(self):
 
+        # https://gitlab.com/inkscape/inkscape/-/issues/4163
+        os.environ["SELF_CALL"] = "true"
+
         opt = self.options
         filename, file_extension = os.path.splitext(opt.dest_file)
 
