@@ -259,8 +259,8 @@ class ExportAs(inkex.Effect):
             cmd_export.append("-strip")
             cmd_export.append("-interlace")
             cmd_export.append("PNG")
-            #cmd_export.append("-colorspace")
-            #cmd_export.append("RGB")
+            # cmd_export.append("-colorspace")
+            # cmd_export.append("RGB")
             cmd_export.append("-resize")
             cmd_export.append("{}%".format(opt.resize))
             cmd_export.append("-quality")
@@ -279,8 +279,8 @@ class ExportAs(inkex.Effect):
             cmd_export.append("-strip")
             cmd_export.append("-interlace")
             cmd_export.append("JPEG")
-            cmd_export.append("-colorspace")
-            cmd_export.append("RGB")
+            # cmd_export.append("-colorspace")
+            # cmd_export.append("RGB")
             cmd_export.append("-resize")
             cmd_export.append("{}%".format(opt.resize))
             cmd_export.append("-quality")
@@ -296,6 +296,21 @@ class ExportAs(inkex.Effect):
             cmd_export.append("\"{}\"".format(opt.temp_file))
             cmd_export.append("-define")
             cmd_export.append("webp:lossless=true")
+            cmd_export.append("-resize")
+            cmd_export.append("{}%".format(opt.resize))
+            cmd_export.append("-quality")
+            cmd_export.append(str(opt.quality))
+            cmd_export.append("-density")
+            cmd_export.append(str(opt.dpi))
+            cmd_export.append("\"{}\"".format(opt.dest_file))
+
+        elif opt.format == "avif":
+
+            # Correct extension
+            opt.dest_file = filename + '.avif'
+            cmd_export.append("\"{}\"".format(opt.temp_file))
+            cmd_export.append("-define")
+            cmd_export.append("avif:lossless=true")
             cmd_export.append("-resize")
             cmd_export.append("{}%".format(opt.resize))
             cmd_export.append("-quality")
